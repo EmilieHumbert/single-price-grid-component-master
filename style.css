@@ -1,0 +1,122 @@
+:root {
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-bright-yellow: hsl(53, 90%, 88%);
+  --darker-green: hsl(179, 52%, 46%);
+  --lighter-green-1: hsl(180, 46%, 51%);
+  --lighter-green-2: hsl(183, 61%, 65%);
+  --lighter-green-3: hsl(181, 69%, 80%);
+  --darker-grey: hsl(225, 9%, 73%);
+  --lighter-grey: hsl(206, 47%, 93%);
+}
+
+body {
+  background-color: var(--lighter-grey);
+  text-align: center;
+}
+
+.container-box {
+  display: inline-block;
+}
+
+.container {
+  box-shadow: 5px 5px 5px var(--darker-grey);
+  display: grid;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  grid-template-areas:
+    "header"
+    "main"
+    "sidebar";
+  margin: 80px 0;
+  text-align: left;
+  width: 375px;
+}
+
+.title {
+  font-weight: 700;
+}
+
+/* description box */
+.description-box {
+  border-radius: 5px 5px 0 0;
+  background-color: white;
+  color: var(--darker-grey);
+  grid-area: header;
+  padding: 15px 25px;
+}
+
+.description-box-title {
+  color: var(--darker-green);
+  font-size: 24px;
+}
+
+.description-box-sub-title {
+  color: var(--bright-yellow);
+  font-size: 18px;
+  font-weight: 700;
+}
+.description-box p {
+  line-height: 1.8;
+}
+
+/* price box */
+.price-box {
+  background-color: var(--darker-green);
+  color: white;
+  grid-area: main;
+  padding: 10px 25px;
+}
+
+.price-box-title {
+  font-size: 20px;
+}
+
+.price-box-price {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.price-box-time {
+  color: var(--lighter-green-2);
+}
+
+.price-box-description {
+  color: var(--lighter-green-3);
+  font-size: 18px;
+  font-weight: 400;
+  margin: 5px 0 20px 0;
+}
+
+.price-box-btn {
+  background-color: var(--bright-yellow);
+  border: none;
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  color: var(--light-bright-yellow);
+  font-weight: 700;
+  font-size: 14px;
+  height: 50px;
+  margin: 13px 0;
+  width: 100%;
+}
+
+/* list box */
+.list-box {
+  background-color: var(--lighter-green-1);
+  border-radius: 0 0 5px 5px;
+  color: white;
+  grid-area: sidebar;
+  padding: 10px 25px;
+}
+
+.list-box-title {
+  font-size: 20px;
+}
+
+.list-box-list {
+  color: var(--lighter-green-3);
+  font-size: 17px;
+  line-height: 1.5;
+  list-style: none;
+  padding: 0;
+}
