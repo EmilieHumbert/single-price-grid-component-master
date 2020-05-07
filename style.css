@@ -77,7 +77,13 @@ body {
 }
 
 .price-box-time {
+  align-self: center;
   color: var(--lighter-green-2);
+  margin-left: 10px;
+}
+
+.price-box-price-time {
+  display: inline-flex;
 }
 
 .price-box-description {
@@ -119,4 +125,98 @@ body {
   line-height: 1.5;
   list-style: none;
   padding: 0;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    box-shadow: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header"
+      "main sidebar";
+    width: 1440px;
+  }
+
+  /* description box */
+  .description-box {
+    grid-area: header;
+    padding: 76px 70px;
+  }
+
+  .description-box-title {
+    font-size: 56px;
+    margin: 0;
+  }
+
+  .description-box-sub-title {
+    font-size: 42px;
+    margin: 40px 0 20px 0;
+  }
+
+  .description-box p {
+    font-size: 36px;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  /* price box */
+  .price-box {
+    border-radius: 0 0 0 5px;
+    grid-area: main;
+    padding: 76px 70px;
+  }
+
+  .price-box-title {
+    font-size: 43px;
+    margin: 0;
+  }
+
+  .price-box-price {
+    font-size: 80px;
+    margin: 0;
+  }
+
+  .price-box-time {
+    align-self: center;
+    color: var(--lighter-green-2);
+    font-size: 38px;
+    margin-left: 10px;
+  }
+
+  .price-box-price-time {
+    display: inline-flex;
+  }
+
+  .price-box-description {
+    font-size: 37px;
+    margin: 0;
+    margin-bottom: 45px;
+  }
+
+  .price-box-btn {
+    font-size: 18px;
+    height: 60px;
+    margin: 0;
+    width: 100%;
+  }
+
+  /* list box */
+  .list-box {
+    border-radius: 0 0 5px 0;
+    grid-area: sidebar;
+    padding: 76px 70px;
+  }
+
+  .list-box-title {
+    font-size: 43px;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  .list-box-list {
+    font-size: 24px;
+    margin: 0;
+  }
 }
